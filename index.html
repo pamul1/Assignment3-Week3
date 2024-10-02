@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <h1>Vehicle Details</h1>
+
+    <form onsubmit="vehicleInfo()">
+        <label>Make</label>
+        <input type="text" id="inputMake" required>
+
+        <lable>Model</lable>
+        <input type="text" id="inputModel" required>
+
+        <lable>Year</lable>
+        <span class="error" id="errorinputYear"></span>
+        <input type="number" id="inputYear" min="1990">
+
+        <lable>Doors</lable>
+        <input type="number" id="inputDoors">
+
+        <lable>Type</lable>
+        <input type="text" id="inputType" required>
+
+        <lable>Vehicle Type</lable>
+        <span class="error" id="errorVehicle"></span>
+        <select id="inputVehicle">
+            <option value="">Select Option</option>
+            <option value="Car">Car</option>
+            <option value="Motorcycle">Motorcycle</option>
+        </select>
+
+        
+        <button>Send</button>
+    </form>
+
+    
+     <table id="outputCar"></table>
+     <table id="outputMotorcycle"></table>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
